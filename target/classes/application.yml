@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  #-------mysql新版本的写法-------
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: "jdbc:mysql://localhost:3306/yy?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true"
+
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml #配置mapping的位置
+  type-aliases-package: com.swp.entity #配置这个了在mapping里面就不用写包名
+
+
+
+
+

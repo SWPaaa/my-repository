@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.swp.mybatis.repository.UserRepository">
+    <!--注意这里的resultType="User"没有包名，因为在yml的mysql里面有配置，这里的id也与UserRepository里面的方法名对应-->
+    <select id="findAll" resultType="User">
+        select * from user;
+    </select>
+</mapper>
